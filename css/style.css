@@ -1,0 +1,368 @@
+/** 
+ * Globals
+ */
+
+ /* fonts without a license */
+@font-face {
+  font-family: "Gotham-Black";
+  src: url(../fonts/GothamBlack.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gotham-Thin";
+  src: url(../fonts/Gotham-Thin.otf);
+  src: url(../fonts/Gotham-Thin.ttf);
+  font-weight: thin;
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url(../fonts/Gotham-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrap-top {
+  background: url(../images/backgrond-top.jpg);
+  padding: 85px 0 90px 0;
+  position: relative;
+}
+
+.wrap-top::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/backgrond-top.jpg);
+  width: 25px;
+  height: 25px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.wrap-bottom {
+  background-image: url(../images/background-bottom.jpg);
+  padding: 75px 0 65px 0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Global floating rules */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Global text centering class, use it anywhere where you want to have centered text */
+.text-center {
+  text-align: center;
+}
+
+/* Global bold white text, use it anywhere on the page */
+.description-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+/* Global underline text, use it anywhere on the page */
+.u {
+  text-decoration: underline;
+}
+
+/* Global margin-bottom: 75, after h2 and span */
+.box-heading {
+  margin-bottom: 75px;
+}
+
+/**
+ * Header
+ */
+.header {
+  margin-bottom: 100px;
+}
+
+.header-logo {
+  float: left;
+}
+
+.header-logo span:first-child {
+  font-size: 28px;
+  display: block;
+}
+
+.header-logo span {
+  font-family: "Gotham-Thin";
+  color: #fff;
+  font-size: 14px;
+}
+
+.header-logo {
+  float: left;
+  margin-right: 10px;
+}
+
+.header-menu {
+  float: right;
+  /* margin-top: 12px; */
+  padding-top: 12px;
+  list-style: none;
+}
+
+.header-menu ul {
+  list-style: none;
+  margin: 0 -5px;
+  font-size: 0;
+}
+
+.header-menu li {
+  display: inline-block;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.header-menu a {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  padding: 18px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #9884aa;
+  font-family: "Gotham-Black";
+  text-decoration: none;
+  position: relative;
+}
+
+.header-menu a:hover {
+  background-color: #f7df59;
+  box-shadow: 0 3px #4c2f65;
+  z-index: 1;
+}
+
+.header-menu a:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-top: 8px solid #f7df59;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: translateX(-50%);
+}
+
+.header-menu a:hover::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 50%;
+  border-top: 10px solid #4c2f65;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  transform: translateX(-50%);
+}
+
+.header-text {
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.header-text a {
+  text-decoration: none;
+}
+
+/* Cards */
+.cards {
+  margin-bottom: 90px;
+  font-size: 0;
+}
+
+.cards .card {
+  display: inline-block;
+  width: calc(100% / 3 - 100px / 3);
+  border-radius: 5px;
+  margin-right: 50px;
+  max-height: 310px;
+  background-color: #fff;
+  padding: 20px 20px 35px 20px;
+  font-size: 16px;
+  box-shadow: 0px 4px 0px 0px #dcdcdc;
+}
+
+.cards .card:last-child {
+  margin-right: 0;
+}
+
+.card-img {
+  max-width: 100%;
+}
+
+.card-text {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 25px;
+  color: #654d7b;
+  text-transform: uppercase;
+}
+
+/* buttons */
+.btn-group {
+  text-align: center;
+  font-size: 0;
+}
+
+.btn {
+  width: 140px;
+  height: 55px;
+  background: none;
+  color: #fff;
+  font-family: "Gotham-Black";
+  font-size: 18px;
+  border: 1px solid #9884aa;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-group .btn:first-child {
+  margin-right: 10px;
+}
+
+.btn-group button:hover {
+  background-color: #69c7e2;
+  box-shadow: 0px 4px 0px 0px #432d57;
+}
+
+/* text */
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #654d7b;
+}
+
+.text-darken {
+  color: #ead7fb;
+}
+
+/**
+ * Promo
+ */
+.promo {
+  padding-bottom: 40px;
+  margin-bottom: 45px;
+  border-bottom: 2px solid #9884aa;
+}
+
+.promo h1 {
+  font-size: 112px;
+  font-family: "Gotham-Black";
+  color: #fff;
+}
+
+.description-title {
+  font-size: 34px;
+  color: #fff;
+  font-family: "Gotham-Bold";
+}
+
+/**
+ * Slider
+ */
+.slider-carousel p {
+  color: #fff;
+  font-family: "Gotham-Thin";
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.slick-slide {
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-list {
+  margin-bottom: 60px;
+}
+
+.licence-section {
+  padding-bottom: 65px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 13px;
+  border-bottom: 2px solid #6d5384;
+}
+
+.licence-text {
+  padding: 30px 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 0px 0px rgba(220, 220, 220, 1);
+  font-family: "Roboto", sans-serif;
+  line-height: 2.3;
+  border-radius: 5px;
+  color: #9481a5;
+}
+
+.licence-text u {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.licence-text b {
+  font-weight: 600;
+}
+
+/* * Footer */
+.footer {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #836c98;
+}
+
+.footer ul {
+  display: inline-block;
+}
+
+.footer li {
+  display: inherit;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #836c98;
+}
+
+.footer li:not(:first-child)::before {
+  content: "\/ ";
+}
